@@ -16,8 +16,12 @@ def main(service, title):
 
     predefined_titles = data.key_places["title"].values.tolist()
 
-    best_match = process.extractOne(title, predefined_titles)
-    matched_title, score = best_match
+    if title == "All":
+        matched_title = "All"
+
+    else:
+        best_match = process.extractOne(title, predefined_titles)
+        matched_title, score = best_match
     
 
     if service == 'bicimad' and matched_title == "All":
