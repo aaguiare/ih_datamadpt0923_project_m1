@@ -13,7 +13,7 @@ def map_bicimad():
         address_bicimad = row['address']
 
         # Create popup text
-        popup_text = f"Station: {station_name_bicimad}<br>Address: {address_bicimad}"
+        popup_text = f"Bicimad Station: {station_name_bicimad}<br>Address: {address_bicimad}"
         folium.Marker(
             location=[lat_bicimad, lng_bicimad],
             popup=popup_text,
@@ -26,7 +26,7 @@ def map_bicimad():
         address_key = row['address.street-address']
 
         # Create popup text
-        popup_text = f"Station: {station_name_key}<br>Address: {address_key}"
+        popup_text = f"Place of interest: {station_name_key}<br>Address: {address_key}"
         folium.Marker(
             location=[lat_key, lng_key],
             popup=popup_text,
@@ -44,7 +44,7 @@ def map_bicipark():
         address_bicipark = row['address']
 
         # Create popup text
-        popup_text = f"Station: {station_name_bicipark}<br>Address: {address_bicipark}"
+        popup_text = f" Bicipark Station: {station_name_bicipark}<br>Address: {address_bicipark}"
         folium.Marker(
             location=[lat_bicipark, lng_bicipark],
             popup=popup_text,
@@ -57,7 +57,7 @@ def map_bicipark():
         address_key = row['address.street-address']
 
         # Create popup text
-        popup_text = f"Station: {station_name_key}<br>Address: {address_key}"
+        popup_text = f"Place of interest: {station_name_key}<br>Address: {address_key}"
         folium.Marker(
             location=[lat_key, lng_key],
             popup=popup_text,
