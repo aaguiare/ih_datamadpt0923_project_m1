@@ -1,123 +1,121 @@
 <p align="left"><img src="https://cdn-images-1.medium.com/max/184/1*2GDcaeYIx_bQAZLxWM4PsQ@2x.png"></p>
 
-# __ih_datamadpt0923_project_m1__
+## **Ironhack Data PT MAD - Project Module 1**
 
-Ironhack Madrid - Data Analytics Part Time - Sep 2023 - Project Module 1
+This README file includes the details of the repository elements required for the module 1 project within Data Analytics Bootcamp in Ironhack Madrid.
+The project consists of creating a data pipeline that shows the nearest stations by service (Bicimad or Bicipark) to the place of interest given by the project details. 
 
-## **Data:**
+**Data**
 
-There are 2 main datasources:
+- CSV file Bicimad stations
+- CSV file Bicipark stations
+- API REST connection with Portal de datos abiertos del Ayuntamiento de Madrid, with the following data /catalogo/202162-0-instalaciones-accesibles-municip.json, from now known as 'Places of interest'
 
-- **CSV Files.** The datasets contains information from the BiciMAD stations including their location (i.e.: latitude / longitude). You may find the `.csv` files in the __data__ folder.
+**Resources in this repository**
 
-- **API REST.** We will use the API REST from the [Portal de datos abiertos del Ayuntamiento de Madrid](https://datos.madrid.es/nuevoMadrid/swagger-ui-master-2.2.10/dist/index.html?url=/egobfiles/api.datos.madrid.es.json#/), where you can find the __Catálogo de datos__ with more than 70 datasets. The API endpoint is `https://datos.madrid.es/egob`. 
+This repository will include the following elements: 
 
-> __IMPORTANT:__ These are the body corresponding to every dataset:
+- Modules_database py file with all the details on data acquisition and wrangling of the place of interest list, Bicimad, and Bicipark data
+- Modules_function py file with the auxiliary functions to be used during the data pipeline
+- Geo_calculations py file includes the two given functions in the project to calculate distances with coordinates. This module is given for project execution, not created while developing the code.
+- Main py file with all the data pipeline execution, applying all the auxiliary resources from the modules 
+- General map creation module to create visual maps of all the places of interest and Bicimad or Bicipark stations
+- Key map creation module to create visual maps of the place of interest input by the user with the nearest station, as well as a line of relation among two points
+- Module api data with all the details of the connection with Bicimad API, extraction in real-time bases, and bikes available in the stations.
+- Presentation file for the project introduction on project day
+```
 
-- Alana: `/catalogo/209426-0-templos-catolicas.json`
+📁 Folder structure
+└── project
+    ├── __trash__
+    ├── .gitignore
+    ├── README.md
+    ├── LICENSE
+    ├── main.py
+    ├── output
+    ├── notebooks
+    │   ├── dev_notebook_.ipynb
+    ├── modules
+    │   ├── .env
+    │   ├── general_map_creation.py
+    │   ├── module_api_data.py
+    │   ├── key_api_creation.py
+    │   ├── geo_calculations.py
+    │   ├── modules_database
+    │   ├── modules_function
+    └── data
+        ├── bicimad_stations.csv
+        ├── bicipark_stations.csv
 
-- Alberto: `/catalogo/209434-0-templos-otros.json`
+```
 
-- Ana: `/catalogo/202162-0-instalaciones-accesibles-municip.json`
+🥤**Usage**
 
-- Andrew: `/catalogo/202180-0-instalaciones-accesibles-no-muni.json`
-
-- Carlos: `/catalogo/202311-0-colegios-publicos.json`
-
-- Elena: `/catalogo/203166-0-universidades-educacion.json`
-
-- Guille: `/catalogo/200215-0-instalaciones-deportivas.json`
-
-- John: `/catalogo/200304-0-centros-culturales.json`
-
-- Natalia: `/catalogo/201000-0-embajadas-consulados.json`
-
-- Rodrigo: `/catalogo/300356-0-monumentos-ciudad-madrid.json`
-
-- Sil: `/catalogo/208844-0-monumentos-edificios.json`
-
-- Silvia: `/catalogo/300614-0-centros-educativos.json`
-
-- Tere: `/catalogo/200761-0-parques-jardines.json`
-
-- Tomás: `/catalogo/212808-0-espacio-deporte.json`
-
-
-
----
-
-## **Main Challenge:**
-
-You must create a Python App (**Data Pipeline**) that allow their potential users to find the nearest BiciMAD station to a set of places of interest using the methods included in the module `geo_calculations.py`. The output table should look similar to:
-
-| Place of interest | Type of place (*) | Place address | BiciMAD station | Station location |
-|---------|----------|-------|------------|----------|
-| Auditorio Carmen Laforet (Ciudad Lineal)   | Centros Culturales | Calle Jazmin, 46 | Legazpi | Calle Bolívar, 3 |
-| Centro Comunitario Casino de la Reina | Centros municipales de enseñanzas artísticas | Calle Casino, 3 | Chamartin | Calle Rodríguez Jaén, 40 |
-| ...     | ...            | ...        | ...      | ...        |
-> __(*)__ This correspond to the type of place assigned to you. 
+At the execution of pipeline with main.py, the user must input through argparse the service that he is interested in ('bicimad or bicipark, as "-p" or "--service") and the place of interest where he is situated (as -t or "--title"), to give the nearest station to him, as well as total distance, a visual map with the position of both points and specific CSV.
 
 
-**Your project must meet the following requirements:**
-
-- It must be contained in a GitHub repository which includes a README file that explains the aim and content of your code. You may follow the structure suggested [here](https://github.com/potacho/data-project-template).
-
-- __It must create, at least, a `.csv` file including the requested table (i.e. Main Challenge).__ Alternatively, you may create an image, pdf, plot or any other output format that you may find convenient. You may also send your output by e-mail, upload it to a cloud repository, etc. 
-
-- It must provide, at least, two options for the final user to select when executing using `argparse`: **(1)** To get the table for every 'Place of interest' included in the dataset (or a set of them), **(2)** To get the table for a specific 'Place of interest' imputed by the user.
+Additionally, the user can define the location "All" which will create a CSV with the list of places of interest with the nearest stations from the services of choice and the distance, as well as a visual map including all the places of interest in Madrid with all the existing stations.
 
 
-**Additionally:**
+🔧**Configuration**
 
-- You must prepare a 4 minutes presentation (ppt, canva, etc.) to explain your project (Instructors will provide further details about the content of the presentation).
+The following libraries are used in the pipeline, so they should be downloaded in the environment to be executed
 
-- The last slide of your presentation must include your candidate for the **'Ironhack Data Code Beauty Pageant'**. 
+```
+import numpy as np
+import argparse
+from scipy.spatial.distance import cdist
+import geopandas as gpd
+from shapely.geometry import Point
+import requests
+import pandas as pd 
+import folium 
+from fuzzywuzzy import process
+from dotenv import load_dotenv
+import os
+```
 
+💥**Technology stack**
 
----
+Python, Pandas, Scipy, Scikit-learn, Numpy, Geopandas, Shapely, Fuzzywuzzy, Folium, Os, Dotenv, ArgParse and Requests.
 
-### **Bonus 1:**
+👀**Context**
 
+This repository is the final project for Module 1 project for the Part Time Data Analytics Bootcamp in November 2023, which had the following requirements: 
+
+- Main Challenge:
+
+You must create a Python App (Data Pipeline) allowing potential users to find the nearest BiciMAD station to a set of places of interest using the methods included in the module geo_calculations.py.
+Your project must meet the following requirements:
+
+- It must be contained in a GitHub repository with a README file that explains the aim and content of your code. You may follow the structure suggested here.
+
+- It must create, at least, a .csv file including the requested table (i.e. Main Challenge). Alternatively, you may create an image, pdf, plot or any other output format that you may find convenient. You may also send your output by e-mail, upload it to a cloud repository, etc.
+
+- It must provide, at least, two options for the final user to select when executing using argparse: (1) To get the table for every 'Place of interest' included in the dataset (or a set of them), (2) To get the table for a specific 'Place of interest' imputed by the user.
+
+- Additionally:
+
+    You must prepare a 4 minutes presentation (ppt, canva, etc.) to explain your project (Instructors will provide further details about the content of the presentation). The last slide of your presentation must include your candidate for the 'Ironhack Data Code Beauty Pageant'.
+
+- Bonus 1:
 You may include in your table the availability of bikes in each station.
 
----
+- Bonus 2:
+You may improve the usability of your app by using FuzzyWuzzy.
 
-### **Bonus 2:**
+- Bonus 3:
+Feel free to enrich your output data with any data you may find relevant (e.g.: wiki info for every place of interest) or connect to the BiciMAD API and update bikes availability in realtime or find a better way to calculate distances...there's no limit!!!
 
-You may improve the usability of your app by using [FuzzyWuzzy](https://pypi.org/project/fuzzywuzzy/).
+💩 **ToDo**
 
----
+As next steps and continuous improvements: 
 
-### **Bonus 3:**
-
-Feel free to enrich your output data with any data you may find relevant (e.g.: wiki info for every place of interest) or connect to the [BiciMAD API](https://mobilitylabs.emtmadrid.es/) and update bikes availability realtime or find a better way to calculate distances...there's no limit!!!
-
---- 
-
-
-## **Project Main Stack**
-
-- [Requests](https://requests.readthedocs.io/)
-
-- [Pandas](https://pandas.pydata.org/pandas-docs/stable/reference/index.html)
-
-- Module `geo_calculations.py`
-
-- [Argparse](https://docs.python.org/3.9/library/argparse.html)
+- Improve map visualization and data input for usability 
+- Create interactive maps to include walkable and transport approaches from the places of interest to the stations, rather than a straight line.
 
 
+💌 **Contact info**
 
-
-
-
-
-
-
-
-
-
- 
-
-
- 
-
+Hi! I am Ana! 🎟
+Feel free to contact me at teamurjc@gmail.com. Happy to chat!
