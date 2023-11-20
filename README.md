@@ -13,16 +13,29 @@ The project consists of creating a data pipeline that shows the nearest stations
 
 **Resources in this repository**
 
-This repository will include the following elements: 
+This repository will include the following elements (apart from the ones defined in **Data**): 
 
-- Modules_database py file with all the details on data acquisition and wrangling of the place of interest list, Bicimad, and Bicipark data
-- Modules_function py file with the auxiliary functions to be used during the data pipeline
-- Geo_calculations py file includes the two given functions in the project to calculate distances with coordinates. This module is given for project execution, not created while developing the code.
-- Main py file with all the data pipeline execution, applying all the auxiliary resources from the modules 
-- General map creation module to create visual maps of all the places of interest and Bicimad or Bicipark stations
-- Key map creation module to create visual maps of the place of interest input by the user with the nearest station, as well as a line of relation among two points
-- Module api data with all the details of the connection with Bicimad API, extraction in real-time bases, and bikes available in the stations.
-- Presentation file for the project introduction on project day
+- Modules:
+
+    - Modules_database py file with all the details on data acquisition and wrangling of the place of interest list, Bicimad, and Bicipark data
+    - Modules_function py file with the auxiliary functions to be used during the data pipeline
+    - Geo_calculations py file includes the two given functions in the project to calculate distances with coordinates. This module is given for project execution, not created while developing the code.
+    - General map creation module to create visual maps of all the places of interest and Bicimad or Bicipark stations
+    - Key map creation module to create visual maps of the place of interest input by the user with the nearest station, as well as a line of relation among two points
+    - Module api data with all the details of the connection with Bicimad API, extraction in real-time bases, and bikes available in the stations.
+-Pipeline:
+
+    - Main.py file with all the data pipeline execution, applying all the auxiliary resources from the modules 
+-Notebooks: 
+
+    - A jupyter notebook used for practise and experimentation
+-Ouput: 
+
+Output folder with all the results that the pipeline can create.
+-Others:
+
+    - Presentation file for the project introduction on project day
+    - Trash folder with all the iterations of the main file and modules
 ```
 
 📁 Folder structure
@@ -51,10 +64,19 @@ This repository will include the following elements:
 
 🥤**Usage**
 
-At the execution of pipeline with main.py, the user must input through argparse the service that he is interested in ('bicimad or bicipark, as "-p" or "--service") and the place of interest where he is situated (as -t or "--title"), to give the nearest station to him, as well as total distance, a visual map with the position of both points and specific CSV.
+At the execution of pipeline with main.py, the user must input through argparse the service that he is interested in ('bicimad or bicipark, as "-p" or "--service") and the place of interest where he is situated (as -t or "--title"). 
+
+The output will be the following: 
+
+- A string with the nearest station to him, total distance and the availability of free bases and bikes in each stations in real-time with the API connection for Bicimad input; in Bicipark case, the result comes from the given CSV.
+- A visual map with the position of both points (in the folder output) and a line of correlation.
+- A CSV file (in the folder output) indicating th nearest stations with free bases and bikes available. In the case of Bicimad inputs, the results are in real-time; in Bicipark case, the result comes from the given CSV.
 
 
-Additionally, the user can define the location "All" which will create a CSV with the list of places of interest with the nearest stations from the services of choice and the distance, as well as a visual map including all the places of interest in Madrid with all the existing stations.
+In case the user defines the location as "All", the out put will be as it follows: 
+
+- A CSV file with the list of places of interest aligned with the calculated nerest stations from the services of choice,  the distance from each point and the availability of free bases and bikes in each stations in real-time with the API connection (for Bicimad, Bicipark is static data from CSV)
+- A visual map including all the places of interest in Madrid with all the existing stations (depending on the service choice, Bicimad or Bicipark).
 
 
 🔧**Configuration**
@@ -118,5 +140,4 @@ As next steps and continuous improvements:
 💌 **Contact info**
 
 Hi! I am Ana! 🎟
-
 Feel free to contact me at teamurjc@gmail.com. Happy to chat!
