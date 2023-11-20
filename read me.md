@@ -48,13 +48,8 @@ This repository will include the following elements:
 
 At execution of pipeline with main.py, user must input through argparse the service that he is interested on ('bicimad or bicipark, as "-p" or "--service") and the place of interest where he is situated (as -t or "--title"), to give the nearest station to him, as well as total distance, a visual map with the position of both points and specific csv.
 
-![Keymap](Documents/Keymap.png)  
-![smallcsv](Documents/smallcsv.png)  
 
 Additionally, the user can define as location "All" that will create a csv with all the list of places of interest with the nearest stations from the services of choice and the distance, as well as a visual map including all the places of interest in Madrid with all the existing stations.
-
-![mapall](Documents/mapall.png)  
-![fullcsv](Documents/fullcsv.png)  
 
 
 🔧**Configuration**
