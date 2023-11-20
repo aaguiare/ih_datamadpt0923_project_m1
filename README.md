@@ -23,16 +23,20 @@ This repository will include the following elements (apart from the ones defined
     - General map creation module to create visual maps of all the places of interest and Bicimad or Bicipark stations
     - Key map creation module to create visual maps of the place of interest input by the user with the nearest station, as well as a line of relation among two points
     - Module api data with all the details of the connection with Bicimad API, extraction in real-time bases, and bikes available in the stations.
--Pipeline:
+      
+- Pipeline:
 
-    - Main.py file with all the data pipeline execution, applying all the auxiliary resources from the modules 
--Notebooks: 
+    - Main.py file with all the data pipeline execution, applying all the auxiliary resources from the modules
+      
+- Notebooks: 
 
     - A jupyter notebook used for practise and experimentation
--Ouput: 
+      
+- Output:
+  
+    - Output folder with all the results that the pipeline can create.
 
-Output folder with all the results that the pipeline can create.
--Others:
+- Others:
 
     - Presentation file for the project introduction on project day
     - Trash folder with all the iterations of the main file and modules
