@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_b8bf6a65a155b9a293bbbf2fff98b63e {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_b8bf6a65a155b9a293bbbf2fff98b63e" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_b8bf6a65a155b9a293bbbf2fff98b63e = L.map(
+                "map_b8bf6a65a155b9a293bbbf2fff98b63e",
+                {
+                    center: [40.416775, -3.70379],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 12,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_783aa14507238ed53caf00b9f038c9e1 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+                tile_layer_783aa14507238ed53caf00b9f038c9e1.addTo(map_b8bf6a65a155b9a293bbbf2fff98b63e);
+    
+            var marker_f0e8669d90b60c374b785f43d02f414b = L.marker(
+                [40.400789, -3.6744],
+                {}
+            ).addTo(map_b8bf6a65a155b9a293bbbf2fff98b63e);
+        
+    
+            var icon_8769231868ec4374151fd27f4bc495ba = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_f0e8669d90b60c374b785f43d02f414b.setIcon(icon_8769231868ec4374151fd27f4bc495ba);
+        
+    
+        var popup_bcf0457fb2d2b994b8e6918bed8bc8c1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_317e6e388bdf9f831bc549c21031854c = $(`<div id="html_317e6e388bdf9f831bc549c21031854c" style="width: 100.0%; height: 100.0%;">Bicimad Station: 78 - Pedro Bosch<br>Address: Calle Cerro de la Plata nº 2</div>`)[0];
+                popup_bcf0457fb2d2b994b8e6918bed8bc8c1.setContent(html_317e6e388bdf9f831bc549c21031854c);
+            
+        
+
+        marker_f0e8669d90b60c374b785f43d02f414b.bindPopup(popup_bcf0457fb2d2b994b8e6918bed8bc8c1)
+        ;
+
+        
+    
+    
+            var marker_62ac99429f858bb4b5a52fc2bde5eb07 = L.marker(
+                [40.40096941264061, -3.676132626757882],
+                {}
+            ).addTo(map_b8bf6a65a155b9a293bbbf2fff98b63e);
+        
+    
+            var icon_e563c76a9dad27c36cc66485ac89d37d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_62ac99429f858bb4b5a52fc2bde5eb07.setIcon(icon_e563c76a9dad27c36cc66485ac89d37d);
+        
+    
+        var popup_2c1b7aef36c5b19370fca8f568f3643c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_107a8b3d559ca47a0d7f070c89cfab03 = $(`<div id="html_107a8b3d559ca47a0d7f070c89cfab03" style="width: 100.0%; height: 100.0%;">Place of interest: Agente Tutor. Policía Municipal. Comisaría Integral de Distrito Retiro<br>Address: CALLE HOYUELO 7</div>`)[0];
+                popup_2c1b7aef36c5b19370fca8f568f3643c.setContent(html_107a8b3d559ca47a0d7f070c89cfab03);
+            
+        
+
+        marker_62ac99429f858bb4b5a52fc2bde5eb07.bindPopup(popup_2c1b7aef36c5b19370fca8f568f3643c)
+        ;
+
+        
+    
+    
+            var poly_line_2f433d7cf9207f5550a715a1a69d856c = L.polyline(
+                [[40.400789, -3.6744], [40.40096941264061, -3.676132626757882]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_b8bf6a65a155b9a293bbbf2fff98b63e);
+        
+    
+            map_b8bf6a65a155b9a293bbbf2fff98b63e.fitBounds(
+                [[40.400789, -3.676132626757882], [40.40096941264061, -3.6744]],
+                {}
+            );
+        
+</script>
+</html>
