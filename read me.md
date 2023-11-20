@@ -1,3 +1,5 @@
+<p align="left"><img src="https://cdn-images-1.medium.com/max/184/1*2GDcaeYIx_bQAZLxWM4PsQ@2x.png"></p>
+
 ## **Ironhack Data PT MAD - Project Module 1**
 
 This README file includes the details of the repository elements required for the module 1 project within Data Analytics Bootcamp in Ironhack Madrid.
@@ -19,8 +21,8 @@ This repository will include the following elements:
 - Main py file with all the data pipeline execution, applying all the auxiliary resources from the modules 
 - General map creation module to create visual maps of all the places of interest and Bicimad or Bicipark stations
 - Key map creation module to create visual maps of the place of interest input by the user with the nearest station, as well as a line of relation among two points
-- Module api data with all the details of the connection with Bicimad API, extraction in real time bases, and bikes available in the stations.
-- Presentation file for the project introduction in project day
+- Module api data with all the details of the connection with Bicimad API, extraction in real-time bases, and bikes available in the stations.
+- Presentation file for the project introduction on project day
 ```
 
 📁 Folder structure
@@ -49,7 +51,7 @@ This repository will include the following elements:
 
 🥤**Usage**
 
-At the execution of pipeline with main.py, the user must input through argparse the service that he is interested in ('bicimad or bicipark, as "-p" or "--service") and the place of interest where he is situated (as -t or "--title"), to give the nearest station to him, as well as total distance, a visual map with the position of both points and specific csv.
+At the execution of pipeline with main.py, the user must input through argparse the service that he is interested in ('bicimad or bicipark, as "-p" or "--service") and the place of interest where he is situated (as -t or "--title"), to give the nearest station to him, as well as total distance, a visual map with the position of both points and specific CSV.
 
 
 Additionally, the user can define the location "All" which will create a CSV with the list of places of interest with the nearest stations from the services of choice and the distance, as well as a visual map including all the places of interest in Madrid with all the existing stations.
@@ -115,4 +117,5 @@ As next steps and continuous improvements:
 
 💌 **Contact info**
 
+Hi! I am Ana! 🎟
 Feel free to contact me at teamurjc@gmail.com. Happy to chat!
