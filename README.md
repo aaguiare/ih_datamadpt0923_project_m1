@@ -118,4 +118,5 @@ As next steps and continuous improvements:
 💌 **Contact info**
 
 Hi! I am Ana! 🎟
+
 Feel free to contact me at teamurjc@gmail.com. Happy to chat!
