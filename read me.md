@@ -44,7 +44,7 @@ This repository will include the following elements:
         ├── bicimad_stations.csv
         ├── bicipark_stations.csv
 
-**Usage**
+🥤**Usage**
 
 At execution of pipeline with main.py, user must input through argparse the service that he is interested on ('bicimad or bicipark, as "-p" or "--service") and the place of interest where he is situated (as -t or "--title"), to give the nearest station to him, as well as total distance, a visual map with the position of both points and specific csv.
 
@@ -80,7 +80,7 @@ import os
 
 Python, Pandas, Scipy, Scikit-learn, Numpy, Geopandas, Shapely, Fuzzywuzzy, Folium, Os, Dotenv, ArgParse and Requests.
 
-**Context**
+👀**Context**
 
 This repository is the final project for Module 1 project for the Part Time Data Analytics Bootcamp in November 2023, that had the following requirements: 
 
