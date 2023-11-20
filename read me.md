@@ -84,17 +84,17 @@ This repository is the final project for Module 1 project for the Part Time Data
 You must create a Python App (Data Pipeline) that allow their potential users to find the nearest BiciMAD station to a set of places of interest using the methods included in the module geo_calculations.py.
 Your project must meet the following requirements:
 
-    - It must be contained in a GitHub repository which includes a README file that explains the aim and content of your code. You may follow the structure suggested here.
+    It must be contained in a GitHub repository which includes a README file that explains the aim and content of your code. You may follow the structure suggested here.
 
-    - It must create, at least, a .csv file including the requested table (i.e. Main Challenge). Alternatively, you may create an image, pdf, plot or any other output format that you may find convenient. You may also send your output by e-mail, upload it to a cloud repository, etc.
+    It must create, at least, a .csv file including the requested table (i.e. Main Challenge). Alternatively, you may create an image, pdf, plot or any other output format that you may find convenient. You may also send your output by e-mail, upload it to a cloud repository, etc.
 
-    - It must provide, at least, two options for the final user to select when executing using argparse: (1) To get the table for every 'Place of interest' included in the dataset (or a set of them), (2) To get the table for a specific 'Place of interest' imputed by the user.
+    It must provide, at least, two options for the final user to select when executing using argparse: (1) To get the table for every 'Place of interest' included in the dataset (or a set of them), (2) To get the table for a specific 'Place of interest' imputed by the user.
 
-    - Additionally:
+    Additionally:
 
-        - You must prepare a 4 minutes presentation (ppt, canva, etc.) to explain your project (Instructors will provide further details about the content of the presentation).
+        You must prepare a 4 minutes presentation (ppt, canva, etc.) to explain your project (Instructors will provide further details about the content of the presentation).
 
-        - The last slide of your presentation must include your candidate for the 'Ironhack Data Code Beauty Pageant'.
+        The last slide of your presentation must include your candidate for the 'Ironhack Data Code Beauty Pageant'.
 
 - Bonus 1:
 You may include in your table the availability of bikes in each station.
