@@ -7,9 +7,9 @@ The project consists of creating a data pipeline that shows the nearest stations
 
 **Data**
 
-- CSV file Bicimad stations
-- CSV file Bicipark stations
-- API REST connection with Portal de datos abiertos del Ayuntamiento de Madrid, with the following data /catalogo/202162-0-instalaciones-accesibles-municip.json, from now known as 'Places of interest'
+- CSV file Bicimad stations (located in data folder)
+- CSV file Bicipark stations (located in data folder)
+- API REST connection with Portal de datos abiertos del Ayuntamiento de Madrid, with the following dataset /catalogo/202162-0-instalaciones-accesibles-municip.json, from now known as 'Places of interest'
 
 **Resources in this repository**
 
@@ -34,11 +34,11 @@ This repository will include the following elements (apart from the ones defined
       
 - Output:
   
-    - Output folder with all the results that the pipeline can create.
+    - Output folder with all the results that the data pipeline can create.
 
 - Others:
 
-    - Presentation file for the project introduction on project day
+    - Slide deck for project introduction on project day
     - Trash folder with all the iterations of the main file and modules
 ```
 
@@ -73,15 +73,17 @@ At the execution of pipeline with main.py, the user must input through argparse 
 The output will be the following: 
 
 - A string with the nearest station to him, total distance and the availability of free bases and bikes in each stations in real-time with the API connection for Bicimad input; in Bicipark case, the result comes from the given CSV.
-- A visual map with the position of both points (in the folder output) and a line of correlation.
+- A html visual map with the position of both points (in the folder output) and a line of correlation.
 - A CSV file (in the folder output) indicating th nearest stations with free bases and bikes available. In the case of Bicimad inputs, the results are in real-time; in Bicipark case, the result comes from the given CSV.
 
+![Map](/_trash_/Keymap.png)
 
 In case the user defines the location as "All", the out put will be as it follows: 
 
 - A CSV file with the list of places of interest aligned with the calculated nerest stations from the services of choice,  the distance from each point and the availability of free bases and bikes in each stations in real-time with the API connection (for Bicimad, Bicipark is static data from CSV)
-- A visual map including all the places of interest in Madrid with all the existing stations (depending on the service choice, Bicimad or Bicipark).
+- A html visual map including all the places of interest in Madrid with all the existing stations (depending on the service choice, Bicimad or Bicipark).
 
+![Map](/_trash_/Completemap.png)
 
 🔧**Configuration**
 
