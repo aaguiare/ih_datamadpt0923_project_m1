@@ -39,7 +39,7 @@ This repository will include the following elements (apart from the ones defined
 - Others:
 
     - Slide deck for project introduction on project day
-    - Trash folder with all the iterations of the main file and modules
+    - Trash folder with all the iterations of the main file and modules, as well as additional resources used.
 ```
 
 📁 Folder structure
