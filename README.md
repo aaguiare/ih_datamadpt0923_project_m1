@@ -48,6 +48,7 @@ This repository will include the following elements (apart from the ones defined
     ├── .gitignore
     ├── README.md
     ├── LICENSE
+    ├── Project M1 Ironhack    
     ├── main.py
     ├── output
     ├── notebooks
